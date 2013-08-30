@@ -16,4 +16,47 @@ function surfagility_scripts_and_jquery()
 }
 add_action( 'wp_enqueue_scripts', 'surfagility_scripts_and_jquery' );
 add_theme_support( 'post-thumbnails' );
+
+function new_excerpt_more( $more ) {
+    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '"> ...(Read More)</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+function wcount(){
+    ob_start();
+    the_content();
+    $content = ob_get_clean();
+    return sizeof(explode(" ", $content));
+}
+
+/*===================================================================================
+ * Add Author Links
+ * =================================================================================*/
+function add_to_author_profile( $contactmethods ) {
+    $contactmethods['google_profile'] = 'Google Profile URL';
+    $contactmethods['twitter_profile'] = 'Twitter Profile URL';
+    $contactmethods['facebook_profile'] = 'Facebook Profile URL';
+    $contactmethods['linkedin_profile'] = 'Linkedin Profile URL';
+    $contactmethods['github_profile'] = 'GitHub Profile URL';
+    $contactmethods['pinterest_profile'] = 'Pinterest Profile URL';
+    $contactmethods['tumblr_profile'] = 'Tumbler Profile URL';
+    
+    return $contactmethods;
+}
+add_filter( 'user_contactmethods', 'add_to_author_profile', 10, 1);
+
+
+function custom_excerpt($new_length = 20, $new_more = '...') {
+  add_filter('excerpt_length', function () use ($new_length) {
+    return $new_length;
+  }, 999);
+  add_filter('excerpt_more', 'new_excerpt_more');
+  $output = get_the_excerpt();
+  $output = apply_filters('wptexturize', $output);
+  $output = apply_filters('convert_chars', $output);
+  $output = '<p>' . $output . '</p>';
+  echo $output;
+}
+
+
 ?>

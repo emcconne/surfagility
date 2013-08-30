@@ -1,8 +1,5 @@
-      <hr>
-
-      <footer>
-        <p>&copy; Surfagility 2013</p>
-      </footer>
+        <div style="clear:both"></div>
+        <div class="copyright">&copy; <?php bloginfo('name'); ?></div>
     </div>
   </div>
 </div>
