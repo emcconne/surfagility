@@ -46,7 +46,6 @@ $num_comments = get_comments_number();
 
 
 <?php if ( $num_comments > 0 ) : ?>
-<h4>Comments</h4>
 <ul>
     <?php wp_list_comments(); ?>
 </ul>

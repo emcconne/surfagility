@@ -44,39 +44,3 @@
     </a>
       <div class="container-fluid">
         <div class="row">
-<!--
-  <div class="container"> 
-    <div class="row">
-      <div class="cover-container sidebar-nav-fixed col-sm-4">
-        <aside class="cover">
-          <div class="cover-img" style="background-image:url('<?php bloginfo('template_directory');?>/images/cover_1.jpg')">
-            <div class="cover-body">
-              <div class="cover-body-inner">
-                <h1 class="cover-title"> 
-                  Medium
-                </h1>
-                <p class="cover-description">
-                  A better place to read and write things that matter. 
-                  <a href="//medium.com/about/9e53ca408c48" title="Learn more about Medium">
-                    Learn more
-                  </a>. 
-                  <br>
-                  <br>
-                    Read our 
-                  <a title="Read Medium’s Top 100 Posts from last month" href="https://medium.com/top-100/july-2013">
-                    top posts from last month
-                  </a>.
-                </p>
-                <div class="cover-actions">
-                  <a href="/m/account/authenticate-twitter" class="btn btn-primary">
-                    <span class="icons icons-twitter"></span>
-                    Sign in with Twitter
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </div>
-      <div class="main span-fixed-sidebar col-sm-8">
--->
