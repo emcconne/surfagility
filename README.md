@@ -33,4 +33,6 @@ in the category directory.
 
 This theme uses Font Awesome by Dave Gandy at http://fortawesome.github.io.  Thanks!
 
-The distributed default image was provided by Danny Fowler via Flickr.  Thanks!
+The distributed default image was provided by Danny Fowler via Flickr.  Thanks!  To replace
+this image simply replace the surfagiliy.jpg image with your customized version.  Careful
+to maintain the same name.
