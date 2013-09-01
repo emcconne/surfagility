@@ -18,7 +18,8 @@ Plugins for full functionality:
 
 * The Subtitle = Can be used to add subtitle's to your post.
 * WP User Avatar = This is used for the author's page.  This theme uses gravtar for small
-author image but on the author's page if this plugin is available it will use here.
+author image but on the author's page if this plugin is available it will post it as the
+main author image with the gravatar on top.
 
 This theme also modifies a user's profile to include additional social sites.  These are
 used on the author's page.
