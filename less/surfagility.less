@@ -73,6 +73,10 @@ h5, .h5 {
   font-size: @h5_size;
 }
 
+.page-container {
+  max-width: @max_width;
+}
+
 .featured-section {
   margin-bottom:50px;
 }
@@ -105,6 +109,22 @@ h5, .h5 {
 
 .postmetadata {
   .small-light-text;
+}
+
+.missing-cover-img {
+  position: fixed !important;
+  position: absolute;
+  top: 0;
+  right:0;
+  bottom:0;
+  left:0;
+  width:35%;
+  max-width:475px;
+  //z-index: -1;
+  display: block;
+  -webkit-box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
+  box-shadow: inset -1px 0 0 rgba(0,0,0,0.3);
 }
 
 .cover-img {
@@ -170,13 +190,6 @@ h5, .h5 {
     }
 }
 
-@media (min-width: 768px)
-{
-  .row {
-    margin-right: 0px;
-    margin-left:0px;
-  }
-}
 
 @media (max-width: 1000px)
 {
@@ -191,6 +204,12 @@ h5, .h5 {
     width:100%;
     max-width:100%;
   }
+  .missing-cover-img {
+    position:relative !important;
+    min-height:275px;
+    width:100%;
+    max-width:100%;    
+  }
   .content {
     margin-left:0px;
     width:100%;
@@ -203,9 +222,18 @@ h5, .h5 {
     margin-right: auto;
   }
 
+  .row {
+    margin: auto;
+  }
+
   .author-page .cover-body:before {
     border:none !important;
   }
+}
+
+.row {
+  margin-right:0px;
+  margin-left:0px;
 }
 
 .navigation {
@@ -361,7 +389,6 @@ h5, .h5 {
 }
 
 .post-content {
-  max-width: @max_post_width;
   padding-right:75px;
 }
 
@@ -666,6 +693,8 @@ label {
   .row .row {
     margin:auto;
   }
+
+
   .post-comments {
     padding:10px 20px;
   }
@@ -690,8 +719,8 @@ label {
 
 .nav-item {
   .nav-text; 
-  margin-left: 20px;
-  margin-right:20px;
+ // margin-left: 20px;
+ // margin-right:20px;
   padding: 5px 0 5px 0;
 }
 
@@ -703,6 +732,7 @@ label {
 .content hr {
   margin-top: 10px;
   margin-bottom: 10px;
+  border-top: 2px solid #eee;
 }
 
 @media (max-width: 420px) {
@@ -732,12 +762,13 @@ label {
 
 //This section is for navigation
 .dropdown-wrapper {
-  position:fixed;
-  top:25px;
-  right:25px;
-  background-color:black;
-  z-index:999;
-  font-size: 10px;
+  position: fixed;
+  top: 5px;
+  left: 50px;
+  background-color: #333;
+  border-radius: 5px;
+  z-index: 999;
+  font-size: 15px;
 }
 
 .site-nav:after {
@@ -750,4 +781,12 @@ label {
 
 .about-me:after {
   clear:both;
+}
+
+.nav a {
+  color:white;
+}
+
+.nav a:hover {
+  color:@link_blue;
 }

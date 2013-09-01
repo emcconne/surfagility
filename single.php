@@ -58,10 +58,10 @@ get_header(); ?>
         </div>
         <div class="author-footer row only-display-small">
           <div class="row">
-            <div class="col-12">
+            <div class="col-xs-12">
               <hr>
-              <div class="col-3"><?php get_template_part( 'partials/author', 'img' ); ?></div>
-              <div class="col-7"><?php get_template_part( 'partials/author', 'bio'); ?></div>
+              <div class="col-xs-3"><?php get_template_part( 'partials/author', 'img' ); ?></div>
+              <div class="col-xs-7"><?php get_template_part( 'partials/author', 'bio'); ?></div>
             </div>
           </div>
         </div>
