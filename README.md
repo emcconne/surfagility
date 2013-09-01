@@ -3,6 +3,8 @@ Surfagility
 
 Wordpress theme inspired by Medium.
 
+This theme is "Mobile First" and uses Bootstrap 3.0.0.
+
 This theme is being used at http://brentmcconnell.com if you'd like to see it in action. 
 
 This is a basic Wordpress theme that focuses on blog posts and not on pages.  Pages are
