@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
+<html <?php language_attributes(); ?>
   <head>
     <meta charset="utf-8">
     <title><?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?></title>
@@ -20,7 +20,7 @@
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
   </head>
-  <body>
+  <body <?php body_class($class); ?>>
     <?php
     $pages = get_pages($args);
     ?>

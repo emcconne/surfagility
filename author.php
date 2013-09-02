@@ -132,13 +132,9 @@ get_header(); ?>
         <div class="post-entry">
           <?php custom_excerpt(75, '...More') ?>
         </div>
-        <span class="postmetadata">
-          Posted in <?php the_category(', ') ?> 
-          <strong>|</strong>
-          <span class="comment-number">
-            <?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?>
-          </span>
-        </span>
+        <div class="post-extras">
+          <?php get_template_part('partials/post', 'metadata'); ?>
+        </div>
         <?php endwhile; ?>
 
       <?php else: ?>

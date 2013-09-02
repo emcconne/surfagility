@@ -19,7 +19,7 @@ get_header(); ?>
     <div class="post-wrapper top-small-pad">
   <?php endif; ?>
       <div class="col-lg-8 col-sm-8 post-content">
-        <h1 class="post-title" id="post-<?php the_ID(); ?>">
+        <h1 class="post-title" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_permalink(); ?>">
             <?php the_title(); ?>
           </a>
@@ -44,12 +44,8 @@ get_header(); ?>
         <div class="post-entry">
             <?php the_content(); ?>
         </div>
-        <div class="postmetadata">
-          Posted in <?php the_category(', ') ?> 
-          <strong>|</strong>
-          <span class="comment-number">
-            <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
-          </span>
+        <div class="post-extras">
+          <?php get_template_part('partials/post', 'metadata'); ?>
         </div>
         <div class="pagination">
           <?php wp_link_pages(); ?>
@@ -78,7 +74,7 @@ get_header(); ?>
           <div class="sidebar-inner">
             
             <?php 
-              $author_email = get_the_author_email();
+              $author_email = get_the_author_meta('email');
               $twitter_profile = get_the_author_meta( 'twitter_profile' );
               $linkedin_profile = get_the_author_meta( 'linkedin_profile' );
               $rss_url = get_the_author_meta( 'rss_url' );

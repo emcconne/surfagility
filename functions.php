@@ -11,6 +11,7 @@ function surfagility_scripts_and_jquery()
 
     // For either a plugin or a theme, you can then enqueue the script:
     wp_enqueue_script( 'bootstrap' );
+    wp_enqueue_script( 'comment-reply' );
     wp_enqueue_script( 'respond' );
     wp_enqueue_script( 'less' );
     wp_enqueue_script( 'surfagility' );
@@ -57,6 +58,18 @@ function custom_excerpt($new_length = 20, $new_more = '...') {
   $output = apply_filters('convert_chars', $output);
   $output = '<p>' . $output . '</p>';
   echo $output;
+}
+
+if ( ! isset( $content_width ) )
+  $content_width = 600;
+
+
+add_theme_support( 'automatic-feed-links' );
+
+add_action('after_setup_theme', 'language_setup');
+
+function language_setup(){
+    load_theme_textdomain('surfagility', get_template_directory() . '/languages');
 }
 
 

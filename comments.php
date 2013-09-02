@@ -55,6 +55,7 @@ $num_comments = get_comments_number();
         <ul>
             <?php wp_list_comments(); ?>
         </ul>
+        <?php paginate_comments_links(); ?>
         <?php comment_form($comments_args); ?>
     </div>
   </div>

@@ -153,13 +153,9 @@ get_header(); ?>
                 <?php the_content(); ?>
               <?php endif; ?>
             </div>
-            <span class="postmetadata">
-              Found in <?php the_category(', ') ?> 
-              <strong>|</strong>
-              <span class="comment-number">
-                <?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?>
-              </span>
-            </span>
+            <div class="post-extras">
+              <?php get_template_part('partials/post', 'metadata'); ?>
+            </div>
           </div>
         <?php endwhile; ?>
 

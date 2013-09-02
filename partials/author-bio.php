@@ -1,5 +1,5 @@
 <?php 
-  $author_email = get_the_author_email();
+  $author_email = get_the_author_meta('email');
   $twitter_profile = get_the_author_meta( 'twitter_profile' );
   $linkedin_profile = get_the_author_meta( 'linkedin_profile' );
   $rss_url = get_the_author_meta( 'rss_url' );
