@@ -43,11 +43,19 @@ $args = array(
 
 $num_comments = get_comments_number();
 ?>
-
-
-<?php if ( $num_comments > 0 ) : ?>
-<ul>
-    <?php wp_list_comments(); ?>
-</ul>
+<?php if ( $post->comment_status == 'open' || $num_comments > 0 ) : ?>
+ <div class="row full-width comments-wrapper">
+  <div class="col-lg-12">
+    <?php if ( $post->comment_status == 'open') : ?>
+        <div class="comments-header">Comments</div>
+    <?php else: ?>
+        <div class="comments-header">Comments Closed</div>
+    <?php endif; ?>
+        <div class="post-comments">
+        <ul>
+            <?php wp_list_comments(); ?>
+        </ul>
+        <?php comment_form($comments_args); ?>
+    </div>
+  </div>
 <?php endif; ?>
-<?php comment_form($comments_args); ?>

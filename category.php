@@ -28,6 +28,28 @@ get_header(); ?>
               
             </p>
             <div class="cover-actions">
+              <?php
+                  $args = array(
+                    'child_of'  => $catID
+                  );
+                  $child_categories = get_categories ( $args );
+              ?>
+              <?php if ( $child_categories ) : ?>
+                <p class="check-it">
+                  Child Collections: 
+                </p>
+                <ul>
+                  <?php 
+                    $title = '';
+                    $args = array(
+                      'title_li'  =>  $title,
+                      'depth'     => 1,
+                      'child_of'  => $catID
+                    );
+                    wp_list_categories( $args );
+                  ?> 
+                </ul>
+              <?php endif; ?>
               <p class="check-it">
                 Other Collections: 
               </p>
@@ -36,7 +58,8 @@ get_header(); ?>
                   $title = '';
                   $args = array(
                     'title_li'  =>  $title,
-                    'exclude'   =>  $catID
+                    'exclude'   =>  $catID,
+                    'depth'     => 1
                   );
                   wp_list_categories( $args );
                 ?> 
@@ -52,15 +75,20 @@ get_header(); ?>
            <div class="nav-item pull-left">Latest from <?php single_cat_title(); ?>
             <a href="<?php echo get_category_link( $catID ); ?>/feed/"><i class="icon-rss"></i></a>
            </div>
-           
            <div class="nav-item pull-right">
-            <?php if ( next_posts_link() ) : ?>
-              <a href="<?php next_posts_link('More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>') ?>">
-              </a>
+            <?php if ( get_next_posts_link() ) : ?>
+                <?php echo get_next_posts_link('More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>') ?>
             <?php endif; ?>
             </div>
         </div>
-      <hr>     <?php if ( have_posts() ) : ?> 
+        <?php if ( $child_categories ) : ?>
+        <div class="category-heirarchy">
+          <?php echo get_category_parents( $cat, true, ' &raquo; ' ); ?>
+        </div>
+        <?php endif; ?>
+      <hr>     
+
+      <?php if ( have_posts() ) : ?> 
       <?php while ( have_posts() ) : the_post(); ?>
         <h1 id="post-<?php the_ID(); ?>">
           <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_permalink(); ?>">
@@ -91,13 +119,13 @@ get_header(); ?>
           </span>
         </span>
         <?php endwhile; ?>
-      <div class="navigation row">
-        <div class="pull-left"><?php previous_posts_link('&laquo; Previous Entries') ?></div>
-        <div class="pull-right"><?php next_posts_link('Next Entries &raquo;','') ?></div>
-      </div>
+
       <?php else: ?>
         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
       <?php endif; ?>
+
+    <?php get_template_part( 'partials/post', 'actions' ); ?>
+
 <!-- row div ends in footer -->
 <!-- container div ends in footer -->
 

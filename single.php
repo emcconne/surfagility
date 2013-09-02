@@ -44,13 +44,16 @@ get_header(); ?>
         <div class="post-entry">
             <?php the_content(); ?>
         </div>
-        <span class="postmetadata">
+        <div class="postmetadata">
           Posted in <?php the_category(', ') ?> 
           <strong>|</strong>
           <span class="comment-number">
             <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
           </span>
-        </span>
+        </div>
+        <div class="pagination">
+          <?php wp_link_pages(); ?>
+        </div>
         <?php endwhile; ?>
         <div class="navigation">
           <div class="alignleft"><?php previous_posts_link('&laquo; Previous Entries') ?></div>
@@ -72,7 +75,7 @@ get_header(); ?>
       </div>
       <div class="col-lg-4 col-sm-4 post-sidebar">
         <div class="sidebar-body row <?php if ( ! $featured_image ) : echo "lower-post-sidebar";  endif; ?>">
-          <div class="sidebar-inner col-lg-8 col-offset-4">
+          <div class="sidebar-inner">
             
             <?php 
               $author_email = get_the_author_email();
@@ -90,15 +93,13 @@ get_header(); ?>
             <div class="display-small post-author small-bold">
                 By <?php the_author_posts_link(); ?>
             </div>
-            <div class="section-seperator"></div>
             <div class="author-bio">
-              <?php
-                if ( get_the_author_meta('description') ) :
-                  echo get_the_author_meta('description');
-                endif;
-              ?>
+              <?php if ( get_the_author_meta('description') ) : ?>
+                  <div class="section-seperator"></div>
+                  <?php echo get_the_author_meta('description'); ?>
+                  <div class="section-seperator"></div>
+              <?php endif; ?>
             </div>
-            <div class="section-seperator"></div>
             <div class="author-social">
               <ul>
                 <?php if ( $user_url && $user_url != '' ) : ?>
@@ -152,13 +153,8 @@ get_header(); ?>
     </div>
   </div>
 </div>
-<div class="row full-width comments-wrapper">
-  <div class="col-lg-12">
-    <div class="comments-header">Comments</div>
-    <div class="post-comments">
-  <?php comments_template(); ?>
-    </div>
-  </div>
+<?php comments_template(); ?>
+
 <!-- row div ends in footer -->
 <!-- container div ends in footer -->
 <?php get_footer(); ?>

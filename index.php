@@ -32,7 +32,8 @@ get_header(); ?>
                 <?php 
                   $title = '';
                   $args = array(
-                    'title_li'  =>  $title
+                    'title_li'  =>  $title,
+                    'depth'     => 1
                   );
                   wp_list_categories( $args );
                 ?> 
@@ -115,9 +116,8 @@ get_header(); ?>
           <div class="row">
             <div class="nav-item pull-left">Latest</div>
              <div class="nav-item pull-right">
-              <?php if ( next_posts_link() ) : ?>
-                <a href="<?php next_posts_link('More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>') ?>">
-                </a>
+              <?php if ( get_next_posts_link() ) : ?>
+                <?php echo get_next_posts_link('More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>') ?>
               <?php endif; ?>
               </div>
           </div>
@@ -162,14 +162,14 @@ get_header(); ?>
             </span>
           </div>
         <?php endwhile; ?>
+
       </div>
-      <div class="navigation row">
-        <div class="pull-left"><?php previous_posts_link('&laquo; Previous Entries') ?></div>
-        <div class="pull-right"><?php next_posts_link('Next Entries &raquo;','') ?></div>
-      </div>
+
       <?php else: ?>
         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
       <?php endif; ?>
+  
+    <?php get_template_part( 'partials/post', 'actions' ); ?>
 
 <!-- row div ends in footer -->
 <!-- container div ends in footer -->

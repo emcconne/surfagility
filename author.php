@@ -104,6 +104,11 @@ get_header(); ?>
       <hr>
         <div class="row">
           <div class="nav-item pull-left">Latest By <?php echo $curauth->display_name; ?></div>
+          <div class="nav-item pull-right">
+            <?php if ( get_next_posts_link() ) : ?>
+                <?php echo get_next_posts_link('More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>') ?>
+            <?php endif; ?>
+          </div>
         </div>
       <hr>
     </div>
@@ -135,14 +140,14 @@ get_header(); ?>
           </span>
         </span>
         <?php endwhile; ?>
-      <div class="navigation row">
-        <div class="pull-left"><?php previous_posts_link('&laquo; Previous Entries') ?></div>
-        <div class="pull-right"><?php next_posts_link('Next Entries &raquo;','') ?></div>
-      </div>
+
       <?php else: ?>
         <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
       <?php endif; ?>
+        <?php get_template_part( 'partials/post', 'actions' ); ?>
     </div>
+
+
 <!-- row div ends in footer -->
 <!-- container div ends in footer -->
 

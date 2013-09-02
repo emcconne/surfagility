@@ -44,5 +44,5 @@
         <i class="icon-home"></i>
       </div>
     </a>
-      <div class="container-fluid">
+      <div class="container-fluid page-wrapper">
         <div class="row page-container">
