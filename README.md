@@ -5,13 +5,13 @@ Wordpress theme inspired by Medium.
 This theme is "Mobile First" and uses Bootstrap 3.0.0.
 
 ###Features
-*HTML5/CSS3
-*Responsive design
-*Custom post images
-*Custom category images
-*Custom tag images
-*Custom logo
-*Social links
+* HTML5/CSS3
+* Responsive design
+* Custom post images
+* Custom category images
+* Custom tag images
+* Custom logo
+* Social links
 
 This theme is being used at http://brentmcconnell.com if you'd like to see it in action. 
 
