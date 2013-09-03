@@ -7,7 +7,7 @@ This theme is "Mobile First" and uses Bootstrap 3.0.0.
 
 This theme is being used at http://brentmcconnell.com if you'd like to see it in action. 
 
-![Homepage](emcconne.github.com/surfagility/screenshot.png)
+![Homepage](https://github.com/emcconne/surfagility/blob/master/screenshot.png?raw=true)
 
 This is a basic Wordpress theme that focuses on blog posts and not on pages.  Pages are
 accessible from a dropdown  menu but since I really didn't intend to use pages I didn't
