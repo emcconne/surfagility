@@ -17,7 +17,6 @@ function surfagility_scripts_and_jquery()
     wp_enqueue_script( 'surfagility' );
 }
 add_action( 'wp_enqueue_scripts', 'surfagility_scripts_and_jquery' );
-add_theme_support( 'post-thumbnails' );
 
 function new_excerpt_more( $more ) {
     return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '"> ...(Read More)</a>';
@@ -60,17 +59,20 @@ function custom_excerpt($new_length = 20, $new_more = '...') {
   echo $output;
 }
 
-if ( ! isset( $content_width ) )
-  $content_width = 600;
 
+function surfagility_setup()
+{
+  if ( ! isset( $content_width ) )
+    $content_width = 600;
 
-add_theme_support( 'automatic-feed-links' );
-
-add_action('after_setup_theme', 'language_setup');
-
-function language_setup(){
-    load_theme_textdomain('surfagility', get_template_directory() . '/languages');
+  add_theme_support( 'automatic-feed-links' );
+  add_theme_support( 'post-thumbnails' );
 }
 
+function language_setup(){
+  load_theme_textdomain('surfagility', get_template_directory() . '/languages');
+}
+  
+add_action('after_setup_theme', 'language_setup');
 
 ?>

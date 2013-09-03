@@ -47,12 +47,14 @@ get_header(); ?>
 
 <!--Begin Featured Section -->
   <?php if ( is_front_page() ) : ?>
-  <?php if ( ! get_previous_posts_link() ) : ?>
+  <?php //if ( ! get_previous_posts_link() ) : ?>
+  <?php if ( ! is_paged() ) : ?>
     <div class="featured-section page-section">
     <?php 
       // The Query
       $query = new WP_Query( 'category_name=featured' );
       // The Loop
+      $featured_id=NULL;
       if ( $query->have_posts() ) {
           $query->the_post();
           $featured_id = get_the_id();
@@ -67,7 +69,7 @@ get_header(); ?>
                 </div>
             </div>
         <hr>
-        <div class="post-wrapper featured-excerpt first-row">
+        <div <?php post_class("post-wrapper featured_excerpt first-row");?> >
             <h1 id="post-<?php echo $featured_id; ?>">
               <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_permalink(); ?>">
                 <?php the_title(); ?>
@@ -91,13 +93,9 @@ get_header(); ?>
             <div class="post-entry">
                 <?php custom_excerpt(125, '...more') ?>
             </div>
-            <span class="postmetadata">
-              Found in <?php the_category(', ') ?> 
-              <strong>|</strong>
-              <span class="comment-number">
-                <?php comments_popup_link('No Comments »', '1 Comment »', '% Comments »'); ?>
-              </span>
-            </span>       
+            <div class="post-extras">
+              <?php get_template_part('partials/post', 'metadata'); ?>
+            </div>
         </div>
       </div>
       <?php
@@ -127,7 +125,15 @@ get_header(); ?>
       <?php $first_record=true; ?>
       <?php while ( have_posts() ) : the_post(); 
         if( $post->ID == $featured_id ) continue; ?>
-          <div class="post-wrapper <?php if ($first_record) echo "first-row"; $first_record=false; ?>">
+          <?php 
+            if ($first_record) {
+              $extra_class="first-row";
+              $first_record=false;
+            } else {
+              $extra_class="";
+            }
+          ?>
+          <div <?php post_class("post-wrapper " . $extra_class);?> >
             <h1 id="post-<?php the_ID(); ?>">
               <a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_permalink(); ?>">
                 <?php the_title(); ?>

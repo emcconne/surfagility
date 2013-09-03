@@ -20,9 +20,9 @@
     <?php wp_enqueue_script("jquery"); ?>
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class($class); ?>>
+  <body <?php body_class(); ?>>
     <?php
-    $pages = get_pages($args);
+    $pages = get_pages();
     ?>
 
     <?php if ( $pages ) : ?>

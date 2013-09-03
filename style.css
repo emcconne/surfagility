@@ -1,11 +1,12 @@
 /*
  * Theme Name: Surfagility
- * Theme URI: http:://github.com/emcconne/surfagility;
+ * Theme URI: http://github.com/emcconne/surfagility
  * Author: Brent McConnell
  * Author URI: http://brentmcconnell.com/
- * Version: 1.0
+ * Version: 2.0
  * Description:  Awesome Medium based theme;
  * License:     GNU General Public License v2.0
+ * Tags: flexible-header, featured-images, one-column 
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
  *
@@ -32,9 +33,7 @@
 
 }
 
-.sticky {
-    color: #999;
-}
+
 
 .alignright {
   float: right;
