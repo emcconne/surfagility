@@ -1,4 +1,4 @@
-#Surfagility
+#Surfagility Wordpress Theme
 
 Wordpress theme inspired by Medium.
 
