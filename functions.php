@@ -74,5 +74,6 @@ function language_setup(){
 }
   
 add_action('after_setup_theme', 'language_setup');
+add_action('after_setup_theme', 'surfagility_setup');
 
 ?>
