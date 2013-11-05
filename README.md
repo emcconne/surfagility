@@ -1,6 +1,5 @@
 #Surfagility Wordpress Theme
 
-Wordpress theme inspired by Medium.
 
 This theme is "Mobile First" and uses Bootstrap 3.0.0.
 
@@ -41,7 +40,7 @@ This theme also modifies a user's profile to include additional social sites.  T
 used on the author's page.
 
 Featured Image is also enabled by this theme.  Any post that includes a featured image will
-have it displayed on the post's page across the top similar to Medium.
+have it displayed on the post's page across the top.
 
 Use the images/category directory if you'd like to have specific images for each category. 
 Images must be .jpg and follow the convetion cat_id_#.jpg (ie. 2.jpg, 6.jpg) and must exist
