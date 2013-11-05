@@ -3,7 +3,7 @@
  * Theme URI: http://github.com/emcconne/surfagility
  * Author: Brent McConnell
  * Author URI: http://brentmcconnell.com/
- * Version: 2.0
+ * Version: 2.1
  * Description:  Awesome Medium based theme;
  * License:     GNU General Public License v2.0
  * Tags: flexible-header, featured-images, one-column 
@@ -24,6 +24,12 @@
  *
  *  You should have received a copy of the GNU General Public License
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ * 2.1 - Fixed bug that required WP User Avatar plugin to be installed
+ *
+ *
+ *
  */
 
 .wp-caption,
