@@ -19,23 +19,26 @@ get_header(); ?>
   $tumbler_profile = get_the_author_meta( 'tumbler_profile', $curauth->ID  );
 ?>
 <?php
-  $template_location = get_bloginfo('template_directory'); 
-  if ( has_wp_user_avatar($curauth->ID) ) {
-    $avatar_address = get_wp_user_avatar_src($curauth->ID, 'large'); 
-  } else {
-    $avatar_address = $template_location . "/images/surfagility.jpg"; 
+  $template_location = get_bloginfo('template_directory');
+  $avatar_address = $template_location . "/images/surfagility.jpg"; 
+  $personal_avatar = false;
+  if ( function_exists('has_wp_user_avatar')) {
+    if ( has_wp_user_avatar($curauth->ID) ) {
+      $avatar_address = get_wp_user_avatar_src($curauth->ID, 'large'); 
+      $personal_avatar = true;
+    }
   }
 ?>
 <!-- container div starts in header -->
 <!-- row div starts in header -->
   <div class="author-page">
     <div class="col-lg-5 col-sm-5 cover" > 
-      <?php if ( has_wp_user_avatar($curauth->ID, 'large') ) : ?>
+      <?php if ( $personal_avatar ) : ?>
       <div class="cover-img" style="background-image:url('<?php echo $avatar_address; ?>')">
       <?php else: ?>
       <div class="missing-cover-img">
       <?php endif; ?>
-        <div class="cover-body">
+        <div class="cover-body <?php echo $personal_avatar ? '' : 'missing-avatar' ; ?>">
           <div class="author-photo" style="background-image: url('http://www.gravatar.com/avatar/<?php echo md5( $curauth->user_email ); ?>s=64')"></div>
           <div class="cover-body-inner">
             <h1 class="cover-title">
