@@ -16,11 +16,12 @@
 @line_height: 1.6;
 @small: 12px;
 @medium: 14px;
-@h1_size: 22px;
+@h1_size: 29px;
 @h2_size: 21px;
 @h3_size: 20px;
 @h4_size: 19px;
 @h5_size: 18px;
+@large_font: 49px;
 @large_screen_image_height: 500px;
 @medium_screen_image_height: 400px;
 @small_screen_image_height: 350px;
@@ -429,7 +430,7 @@ h5, .h5 {
 }
 
 .post-title {
-    font-size: 25px;
+    font-size: @large_font;
     margin-bottom: 10px;
     margin-top:0px;
     word-wrap: break-word;
@@ -693,6 +694,10 @@ label {
 @media (max-width: 768px) {
   .only-display-small {
     display:block;
+  }
+
+  .post-title {
+    font-size: @h1_size; 
   }
 
   .main-container {

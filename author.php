@@ -73,7 +73,7 @@ get_header(); ?>
               <?php endif; ?>
               <?php if ( $google_profile && $google_profile != '' ) : ?>
                 <li class="author_google">
-                    <a href="<?php echo $google_profile; ?>"><i class="icon-goolge-plus"></i></a>
+                    <a href="<?php echo $google_profile; ?>"><i class="icon-google-plus"></i></a>
                 </li>
               <?php endif; ?>
               <?php if ( $facebook_profile && $facebook_profile != '' ) : ?>

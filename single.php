@@ -47,7 +47,7 @@ get_header(); ?>
         <div class="post-extras">
           <?php get_template_part('partials/post', 'metadata'); ?>
         </div>
-        <div class="pagination">
+        <div class="wp-pagination">
           <?php wp_link_pages(); ?>
         </div>
         <?php endwhile; ?>
@@ -118,7 +118,7 @@ get_header(); ?>
                 <?php endif; ?>
                 <?php if ( $google_profile && $google_profile != '' ) : ?>
                   <li class="author_google">
-                      <a href="<?php echo $google_profile; ?>"><i class="icon-goolge-plus"></i></a>
+                      <a href="<?php echo $google_profile; ?>"><i class="icon-google-plus"></i></a>
                   </li>
                 <?php endif; ?>
                 <?php if ( $facebook_profile && $facebook_profile != '' ) : ?>
