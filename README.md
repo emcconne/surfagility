@@ -18,6 +18,10 @@ This theme is being used at http://brentmcconnell.com if you'd like to see it in
 
 ![Homepage](https://github.com/emcconne/surfagility/blob/master/screenshot.png?raw=true)
 
+####Mobile Homepage Screenshot
+Based on the size of the viewing device the screen transforms for readability
+![Homepage](https://github.com/emcconne/surfagility/blob/master/screenshot2.png?raw=true)
+
 ####Authors Page
 
 ![Author](https://github.com/emcconne/surfagility/blob/master/author.png?raw=true)
