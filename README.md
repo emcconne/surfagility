@@ -15,8 +15,8 @@ This theme is "Mobile First" and uses Bootstrap 3.0.0.  Requires PHP 5.3+.
 This theme is being used at http://brentmcconnell.com if you'd like to see it in action. 
 
 ###Installation
-To install this theme use the "Download as Zip" option on the right of the screen to 
-download the archive for use in Wordpress.
+To install this theme use the "Download Zip" option on the right of the Surfagility Github 
+homepage to download the archive for use in Wordpress.
 
 ####Homepage Screenshot
 
