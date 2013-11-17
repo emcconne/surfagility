@@ -103,4 +103,4 @@ get_header(); ?>
 <!-- row div ends in footer -->
 <!-- container div ends in footer -->
 
-php get_footer(); ?>
+<?php get_footer(); ?>
