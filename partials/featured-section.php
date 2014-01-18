@@ -23,7 +23,7 @@
             <?php the_time('F jS, Y') ?>
           </span>
           <span class="post-readtime small-light-text">
-            <?php echo round(wcount() / 250, 0, PHP_ROUND_HALF_UP); ?> minute read
+            <?php echo round(wcount() / 250, 0); ?> minute read
           </span> 
         </div>
         <div class="post-entry">
