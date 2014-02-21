@@ -8,7 +8,7 @@
   $facebook_profile = get_the_author_meta( 'facebook_profile' );
   $github_profile = get_the_author_meta( 'github_profile' );
   $pinterest_profile = get_the_author_meta( 'pinterest_profile' );
-  $tumbler_profile = get_the_author_meta( 'tumbler_profile' );
+  $tumblr_profile = get_the_author_meta( 'tumblr_profile' );
 ?>
 <div class="display-small post-author small-bold">
   <?php the_author_posts_link(); ?>
@@ -62,9 +62,9 @@
           <a href="<?php echo $github_profile; ?>"><i class="icon-github"></i></a>
       </li>
     <?php endif; ?>
-    <?php if ( $tumbler_url && $tumbler_url != '' ) : ?>
-      <li class="author-tumbler">
-          <a href="<?php echo $tumbler_url; ?>"><i class="icon-tumbler"></i></a>
+    <?php if ( $tumblr_url && $tumblr_url != '' ) : ?>
+      <li class="author-tumblr">
+          <a href="<?php echo $tumblr_url; ?>"><i class="icon-tumblr"></i></a>
       </li>
     <?php endif; ?>
   </ul>
