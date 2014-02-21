@@ -40,7 +40,7 @@ function add_to_author_profile( $contactmethods ) {
     $contactmethods['linkedin_profile'] = 'Linkedin Profile URL';
     $contactmethods['github_profile'] = 'GitHub Profile URL';
     $contactmethods['pinterest_profile'] = 'Pinterest Profile URL';
-    $contactmethods['tumblr_profile'] = 'Tumbler Profile URL';
+    $contactmethods['tumblr_profile'] = 'tumblr Profile URL';
     
     return $contactmethods;
 }

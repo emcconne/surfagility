@@ -56,11 +56,11 @@ get_header(); ?>
       <hr>
         <div class="row">
            <div class="nav-item pull-left">Latest from <?php single_tag_title(); ?>
-            <a href="<?php echo get_tag_link( $ID ); ?>/feed/"><i class="icon-rss"></i></a>
+            <a href="<?php echo get_tag_link( $ID ); ?>/feed/"><i class="fa fa-rss"></i></a>
            </div>
            <div class="nav-item pull-right">
             <?php if ( get_next_posts_link() ) : ?>
-                <?php echo get_next_posts_link('More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>') ?>
+                <?php echo get_next_posts_link('More&nbsp;<i class="fa fa-chevron-right"></i>') ?>
             <?php endif; ?>
             </div>
         </div>
@@ -78,11 +78,11 @@ get_header(); ?>
         </div>
         <div class="post-info">
           <span class="post-date small-light-text">
-            <span class="glyphicon glyphicon-calendar"></span>
+            <span class="fa fa-calendar"></span>
             <?php the_time('F jS, Y') ?>
           </span>
           <span class="post-readtime small-light-text">
-            <span class="glyphicon glyphicon-time"></span>
+            <span class="fa fa-time"></span>
             <?php echo round(wcount() / 250, 0, PHP_ROUND_HALF_UP); ?> minute read
           </span> 
         </div>

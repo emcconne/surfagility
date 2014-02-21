@@ -16,7 +16,7 @@ get_header(); ?>
   $facebook_profile = get_the_author_meta( 'facebook_profile' , $curauth->ID  );
   $github_profile = get_the_author_meta( 'github_profile', $curauth->ID  );
   $pinterest_profile = get_the_author_meta( 'pinterest_profile', $curauth->ID  );
-  $tumbler_profile = get_the_author_meta( 'tumbler_profile', $curauth->ID  );
+  $tumblr_profile = get_the_author_meta( 'tumblr_profile', $curauth->ID  );
 ?>
 <?php
   $template_location = get_bloginfo('template_directory');
@@ -55,45 +55,45 @@ get_header(); ?>
             <ul>
               <?php if ( $user_url && $user_url != '' ) : ?>
                 <li class="author-url">
-                    <a href="<?php echo $user_url; ?>"><i class="icon-home"></i></a>
+                    <a href="<?php echo $user_url; ?>"><i class="fa fa-home"></i></a>
                 </li>
               <?php endif; ?>
               <li class="author-rss">
-                  <a href="<?php echo get_author_feed_link( $curauth->ID ) ?>"><i class="icon-rss"></i></a>
+                  <a href="<?php echo get_author_feed_link( $curauth->ID ) ?>"><i class="fa fa-rss"></i></a>
               </li>
               <?php if ( $twitter_profile && $twitter_profile != '' ) : ?>
                 <li class="author-twitter">
-                    <a href="<?php echo $twitter_profile; ?>"><i class="icon-twitter"></i></a>
+                    <a href="<?php echo $twitter_profile; ?>"><i class="fa fa-twitter"></i></a>
                 </li>
               <?php endif; ?>
               <?php if ( $linkedin_profile && $linkedin_profile != '' ) : ?>
                 <li class="author-linkedin">
-                    <a href="<?php echo $linkedin_profile; ?>"><i class="icon-linkedin"></i></a>
+                    <a href="<?php echo $linkedin_profile; ?>"><i class="fa fa-linkedin"></i></a>
                 </li>
               <?php endif; ?>
               <?php if ( $google_profile && $google_profile != '' ) : ?>
                 <li class="author_google">
-                    <a href="<?php echo $google_profile; ?>"><i class="icon-google-plus"></i></a>
+                    <a href="<?php echo $google_profile; ?>"><i class="fa fa-google-plus"></i></a>
                 </li>
               <?php endif; ?>
               <?php if ( $facebook_profile && $facebook_profile != '' ) : ?>
                 <li class="author-facebook">
-                    <a href="<?php echo $facebook_profile; ?>"><i class="icon-facebook"></i></a>
+                    <a href="<?php echo $facebook_profile; ?>"><i class="fa fa-facebook"></i></a>
                 </li>
               <?php endif; ?>
               <?php if ( $pinterest_profile && $pinterest_profile != '' ) : ?>
                 <li class="author_pinterest">
-                    <a href="<?php echo $pinterest_profile; ?>"><i class="icon-pinterest"></i></a>
+                    <a href="<?php echo $pinterest_profile; ?>"><i class="fa fa-pinterest"></i></a>
                 </li>
               <?php endif; ?>
               <?php if ( $github_profile && $github_profile != '' ) : ?>
                 <li class="author-github">
-                    <a href="<?php echo $github_profile; ?>"><i class="icon-github"></i></a>
+                    <a href="<?php echo $github_profile; ?>"><i class="fa fa-github"></i></a>
                 </li>
               <?php endif; ?>
-              <?php if ( $tumbler_url && $tumbler_url != '' ) : ?>
-                <li class="author-tumbler">
-                    <a href="<?php echo $tumbler_url; ?>"><i class="icon-tumbler"></i></a>
+              <?php if ( $tumblr_url && $tumblr_url != '' ) : ?>
+                <li class="author-tumblr">
+                    <a href="<?php echo $tumblr_url; ?>"><i class="fa fa-tumblr"></i></a>
                 </li>
               <?php endif; ?>
             </ul>
@@ -109,7 +109,7 @@ get_header(); ?>
           <div class="nav-item pull-left">Latest By <?php echo $curauth->display_name; ?></div>
           <div class="nav-item pull-right">
             <?php if ( get_next_posts_link() ) : ?>
-                <?php echo get_next_posts_link('More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>') ?>
+                <?php echo get_next_posts_link('More&nbsp;<i class="fa fa-chevron-right"></i>') ?>
             <?php endif; ?>
           </div>
         </div>
@@ -124,11 +124,11 @@ get_header(); ?>
         </h1>
         <div class="post-info">
           <span class="post-date small-light-text">
-            <span class="glyphicon glyphicon-calendar"></span>
+            <span class="fa fa-calendar"></span>
             <?php the_time('F jS, Y') ?>
           </span>
           <span class="post-readtime small-light-text">
-            <span class="glyphicon glyphicon-time"></span>
+            <span class="fa fa-time"></span>
             <?php echo round(wcount() / 250, 0, PHP_ROUND_HALF_UP); ?> minute read
           </span> 
         </div>
