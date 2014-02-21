@@ -64,7 +64,7 @@ get_header(); ?>
                 <div class="nav-item pull-left">Featured</div>
                 <div class="nav-item pull-right">
                   <a href="<?php echo get_category_link(get_category_by_slug( "featured" )->cat_ID) ?>">
-                    More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>
+                    More&nbsp;<i class="fa fa-chevron-right"></i>
                   </a>
                 </div>
             </div>
@@ -76,16 +76,16 @@ get_header(); ?>
               </a>
             </h1>
             <div class="display-small post-author small-bold">
-              <span class="glyphicon glyphicon-copyright-mark"></span>
+              <span class="fa fa-copyright-mark"></span>
               <?php the_author_posts_link(); ?>
             </div>
             <div class="post-info">
               <span class="post-date small-light-text">
-                <!--<span class="glyphicon glyphicon-calendar"></span>-->
+                <!--<span class="fa fa-calendar"></span>-->
                 <?php the_time('F jS, Y') ?>
               </span>
               <span class="post-readtime small-light-text">
-                <!--<span class="glyphicon glyphicon-time"></span>-->
+                <!--<span class="fa fa-time"></span>-->
                 <?php echo round(wcount() / 250, 0, PHP_ROUND_HALF_UP); ?> minute read
               </span> 
             </div>
@@ -115,7 +115,7 @@ get_header(); ?>
             <div class="nav-item pull-left">Latest</div>
              <div class="nav-item pull-right">
               <?php if ( get_next_posts_link() ) : ?>
-                <?php echo get_next_posts_link('More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i>') ?>
+                <?php echo get_next_posts_link('More&nbsp;<i class="fa fa-chevron-right"></i>') ?>
               <?php endif; ?>
               </div>
           </div>
@@ -144,11 +144,11 @@ get_header(); ?>
             </div>
             <div class="post-info">
               <span class="post-date small-light-text">
-                <span class="glyphicon glyphicon-calendar"></span>
+                <span class="fa fa-calendar"></span>
                 <?php the_time('F jS, Y') ?>
               </span>
               <span class="post-readtime small-light-text">
-                <span class="glyphicon glyphicon-time"></span>
+                <span class="fa fa-time"></span>
                 <?php echo round(wcount() / 250, 0, PHP_ROUND_HALF_UP); ?> minute read
               </span> 
             </div>

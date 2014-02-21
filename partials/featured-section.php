@@ -1,7 +1,7 @@
 <hr>
     <div class="row">
         <div class="nav-item pull-left">Featured</div>
-        <div class="nav-item pull-right">More&nbsp;<i class="glyphicon glyphicon-chevron-right"></i></div>
+        <div class="nav-item pull-right">More&nbsp;<i class="fa fa-chevron-right"></i></div>
     </div>
 <hr>
 <div class="featured-post">

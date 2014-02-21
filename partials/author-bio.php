@@ -26,45 +26,45 @@
   <ul>
     <?php if ( $user_url && $user_url != '' ) : ?>
       <li class="author-url">
-          <a href="<?php echo $user_url; ?>"><i class="icon-home"></i></a>
+          <a href="<?php echo $user_url; ?>"><i class="fa fa-home"></i></a>
       </li>
     <?php endif; ?>
     <li class="author-rss">
-        <a href="<?php echo get_author_feed_link( get_the_author_meta('ID') ) ?>"><i class="icon-rss"></i></a>
+        <a href="<?php echo get_author_feed_link( get_the_author_meta('ID') ) ?>"><i class="fa fa-rss"></i></a>
     </li>
     <?php if ( $twitter_profile && $twitter_profile != '' ) : ?>
       <li class="author-twitter">
-          <a href="<?php echo $twitter_profile; ?>"><i class="icon-twitter"></i></a>
+          <a href="<?php echo $twitter_profile; ?>"><i class="fa fa-twitter"></i></a>
       </li>
     <?php endif; ?>
     <?php if ( $linkedin_profile && $linkedin_profile != '' ) : ?>
       <li class="author-linkedin">
-          <a href="<?php echo $linkedin_profile; ?>"><i class="icon-linkedin"></i></a>
+          <a href="<?php echo $linkedin_profile; ?>"><i class="fa fa-linkedin"></i></a>
       </li>
     <?php endif; ?>
     <?php if ( $google_profile && $google_profile != '' ) : ?>
       <li class="author_google">
-          <a href="<?php echo $google_profile; ?>"><i class="icon-google-plus"></i></a>
+          <a href="<?php echo $google_profile; ?>"><i class="fa fa-google-plus"></i></a>
       </li>
     <?php endif; ?>
     <?php if ( $facebook_profile && $facebook_profile != '' ) : ?>
       <li class="author-facebook">
-          <a href="<?php echo $facebook_profile; ?>"><i class="icon-facebook"></i></a>
+          <a href="<?php echo $facebook_profile; ?>"><i class="fa fa-facebook"></i></a>
       </li>
     <?php endif; ?>
     <?php if ( $pinterest_profile && $pinterest_profile != '' ) : ?>
       <li class="author_pinterest">
-          <a href="<?php echo $pinterest_profile; ?>"><i class="icon-pinterest"></i></a>
+          <a href="<?php echo $pinterest_profile; ?>"><i class="fa fa-pinterest"></i></a>
       </li>
     <?php endif; ?>
     <?php if ( $github_profile && $github_profile != '' ) : ?>
       <li class="author-github">
-          <a href="<?php echo $github_profile; ?>"><i class="icon-github"></i></a>
+          <a href="<?php echo $github_profile; ?>"><i class="fa fa-github"></i></a>
       </li>
     <?php endif; ?>
     <?php if ( $tumblr_url && $tumblr_url != '' ) : ?>
       <li class="author-tumblr">
-          <a href="<?php echo $tumblr_url; ?>"><i class="icon-tumblr"></i></a>
+          <a href="<?php echo $tumblr_url; ?>"><i class="fa fa-tumblr"></i></a>
       </li>
     <?php endif; ?>
   </ul>
