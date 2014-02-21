@@ -28,7 +28,7 @@
     <div class="dropdown-wrapper">
       <ul class="nav" role="navigation">
         <li class="dropdown">
-          <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-copy"></i> <b class="caret"></b></a>
+          <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-copy"></i> <b class="caret"></b></a>
           <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
             <?php foreach ( $pages as $page ) : ?>
                 <li><a tabindex="-1" data-target="#" href="<?php echo $page->guid; ?>"><?php echo $page->post_title;?></a></li>
@@ -40,7 +40,7 @@
     <?php endif; ?>
     <a class="go-home" href="<?php bloginfo('url') ?>" title="Go Home" alt="Go Home">
       <div class="home-container">
-        <i class="icon-home"></i>
+        <i class="fa fa-home"></i>
       </div>
     </a>
       <div class="container-fluid page-wrapper">
