@@ -1,4 +1,4 @@
-#Surfagility Wordpress Theme
+#Surfagility WordPress Theme
 
 
 This theme is "Mobile First" and uses Bootstrap 3.0.0.  Requires PHP 5.3+.
