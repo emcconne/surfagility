@@ -129,7 +129,7 @@ get_header(); ?>
           </span>
           <span class="post-readtime small-light-text">
             <span class="glyphicon glyphicon-time"></span>
-            <?php echo round(wcount() / 250, 0, PHP_ROUND_HALF_UP); ?> minute read
+            <?php echo round(wcount() / 250, 0); ?> minute read
           </span> 
         </div>
         <div class="post-entry">
