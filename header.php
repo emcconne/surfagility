@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!doctype html>
 <html <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
@@ -39,7 +39,7 @@
       </ul>
     </div>
     <?php endif; ?>
-    <a class="go-home" href="<?php bloginfo('url') ?>" title="Go Home" alt="Go Home">
+    <a class="go-home" href="<?php bloginfo('url') ?>" title="Go Home">
       <div class="home-container">
         <i class="icon-home"></i>
       </div>
