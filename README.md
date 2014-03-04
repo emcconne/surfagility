@@ -16,7 +16,7 @@ This theme is being used at http://brentmcconnell.com if you'd like to see it in
 
 ###Installation
 To install this theme use the "Download Zip" option on the right of the Surfagility Github 
-homepage to download the archive for use in Wordpress.
+homepage to download the archive for use in WordPress.
 
 ####Homepage Screenshot
 
@@ -31,7 +31,7 @@ Based on the size of the viewing device the screen reorients for readability.
 
 ![Author](https://github.com/emcconne/surfagility/blob/master/author.png?raw=true)
 
-This is a basic Wordpress theme that focuses on blog posts and not on pages.  Pages are
+This is a basic WordPress theme that focuses on blog posts and not on pages.  Pages are
 accessible from a dropdown  menu but since I really didn't intend to use pages I didn't
 put a lot of effort into them.
 
@@ -63,7 +63,7 @@ There is some custom functionality linked to the category slug "featured" that p
 it links to a real category.  So if you have a set of popular posts you can place them in this 
 "fetaured" section.
 
-This theme uses Font Awesome by Dave Gandy at http://fortawesome.github.io.  Thanks!
+This theme uses Font Awesome by Dave Gandy at http://fontawesome.io.  Thanks!
 
 The distributed default image was provided by Danny Fowler via Flickr.  Thanks!  To replace
 this image simply replace the surfagiliy.jpg image with your customized version.  Careful
