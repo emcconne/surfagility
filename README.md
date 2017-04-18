@@ -1,9 +1,9 @@
-#Surfagility WordPress Theme
+# Surfagility WordPress Theme
 
 
 This theme is "Mobile First" and uses Bootstrap 3.0.0.  Requires PHP 5.3+.
 
-###Features
+### Features
 * HTML5/CSS3
 * Responsive design via Bootstrap
 * Custom post images
@@ -14,20 +14,20 @@ This theme is "Mobile First" and uses Bootstrap 3.0.0.  Requires PHP 5.3+.
 
 This theme is being used at http://brentmcconnell.com if you'd like to see it in action. 
 
-###Installation
+### Installation
 To install this theme use the "Download Zip" option on the right of the Surfagility Github 
 homepage to download the archive for use in WordPress.
 
-####Homepage Screenshot
+#### Homepage Screenshot
 
 ![Homepage](https://github.com/emcconne/surfagility/blob/master/screenshot.png?raw=true)
 
-####Mobile Homepage Screenshot
+#### Mobile Homepage Screenshot
 
 Based on the size of the viewing device the screen reorients for readability.
 ![Homepage](https://github.com/emcconne/surfagility/blob/master/screenshot2.png?raw=true)
 
-####Authors Page
+#### Authors Page
 
 ![Author](https://github.com/emcconne/surfagility/blob/master/author.png?raw=true)
 
